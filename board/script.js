@@ -1,4 +1,15 @@
 const board = document.querySelector('#board');
+const colors = [
+  'red',
+  'blue',
+  'orange',
+  'green',
+  'grey',
+  'yellow',
+  'brown',
+  'purple',
+  'white',
+];
 const SQUARES_NUMBER = 500;
 
 for (let i = 0; i < SQUARES_NUMBER; i++) {
@@ -13,9 +24,15 @@ for (let i = 0; i < SQUARES_NUMBER; i++) {
 }
 
 const setColor = (element) => {
-  element.style.backgroundColor = 'red';
+  const color = getRandomColor();
+  element.style.backgroundColor = color;
 };
 
 const removeColor = (element) => {
   element.style.backgroundColor = '#1d1d1d';
+};
+
+const getRandomColor = () => {
+  const index = Math.floor(Math.random() * colors.length);
+  return colors[index];
 };
