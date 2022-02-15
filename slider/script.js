@@ -20,6 +20,14 @@ downBtn.addEventListener('click', () => {
   changeSlide('down');
 });
 
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowUp') {
+    changeSlide('up');
+  } else if (e.key === 'ArrowUp') {
+    changeSlide('down');
+  }
+});
+
 const changeSlide = (direction) => {
   if (direction === 'up') {
     activeSlideIndex += 1;
