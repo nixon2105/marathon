@@ -7,9 +7,15 @@ for (let i = 0; i < SQUARES_NUMBER; i++) {
 
   square.addEventListener('mouseover', () => setColor(square));
 
+  square.addEventListener('mouseleave', () => removeColor(square));
+
   board.append(square);
 }
 
 const setColor = (element) => {
   element.style.backgroundColor = 'red';
+};
+
+const removeColor = (element) => {
+  element.style.backgroundColor = '#1d1d1d';
 };
