@@ -35,6 +35,5 @@ const removeColor = (element) => {
 };
 
 const getRandomColor = () => {
-  const index = Math.floor(Math.random() * colors.length);
-  return colors[index];
+  return colors[Math.floor(Math.random() * colors.length)];
 };
