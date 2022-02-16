@@ -45,8 +45,15 @@ const finishGame = () => {};
 
 const createRandomCircle = () => {
   const circle = document.createElement('div');
+  const size = getRandomNumber(10, 60);
 
   circle.classList.add('circle');
+  circle.style.width = `${size}px`;
+  circle.style.height = `${size}px`;
 
   board.append(circle);
+};
+
+const getRandomNumber = () => {
+  return Math.round(Math.random() * (max - min) + min);
 };
